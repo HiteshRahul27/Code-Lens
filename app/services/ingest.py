@@ -10,9 +10,12 @@ from app.services.vector_store import build_faiss_index, save_index
 def ingest_repo(repo_url: str):
     repo_name = repo_url.rstrip("/").split("/")[-1].replace(".git", "")
 
-    repo_path = os.path.join(settings.REPO_DIR, repo_name)
-    repo_data_path = os.path.join(settings.DATA_DIR, repo_name)
+    repo_base = os.path.join(settings.DATA_DIR, settings.REPO_DIR)
+    os.makedirs(repo_base, exist_ok=True)
 
+    repo_path = os.path.join(repo_base, repo_name)
+    repo_data_path = os.path.join(settings.DATA_DIR, repo_name)
+    
     os.makedirs(repo_data_path, exist_ok=True)
 
     chunks_path = os.path.join(repo_data_path, "chunks.json")
