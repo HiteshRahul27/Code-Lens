@@ -2,6 +2,13 @@
 
 CodeLens is a backend system that turns Git repositories into a queryable knowledge base using AST parsing and vector search.
 
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Hugging Face SentenceTransformers](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-SentenceTransformers-orange)](https://www.sbert.net/)
+[![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blue)](https://github.com/facebookresearch/faiss)
+[![Groq](https://img.shields.io/badge/Groq-LLM-orange)](https://groq.com/)
+
 Focus: retrieving and explaining relevant code paths instead of analyzing the entire codebase
 
 ---
