@@ -47,6 +47,28 @@ Focus: retrieving and explaining relevant code paths instead of analyzing the en
 - **Deployment**: Docker + docker-compose
 
 ---
+```text
+Code-Lens/
+│
+├── app/
+│   ├── api/              # API routes
+│   ├── core/             # Config and settings
+│   ├── services/         # Ingestion, parsing, search logic
+│   └── main.py           # FastAPI entry point
+│
+├── data/                 # Generated indexes (ignored)
+├── repos/                # Cloned repositories (ignored)
+│
+├── .venv/                # Virtual environment (ignored)
+├── .env                  # Environment variables (ignored)
+├── .gitignore
+├── .dockerignore
+│
+├── Dockerfile
+├── requirements.txt
+├── streamlit_app.py      # UI (optional)
+```
+---
 ```mermaid
 flowchart TD
     A[Repo URL] --> B[Clone + Filter]
